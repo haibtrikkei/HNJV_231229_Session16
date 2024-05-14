@@ -15,14 +15,11 @@
 <body>
     <div class="container">
         <h1>INSERT STUDENT</h1>
+        <h3 class="text-danger">${err}</h3>
         <form:form action="insertStudent" modelAttribute="s" method="post">
             <div class="mb-3">
-                <label for="stuId" class="form-label">Student Id</label>
-                <form:input path="stuId" class="form-control" id="stuId" aria-describedby="stuIdHelp"/>
-            </div>
-            <div class="mb-3">
-                <label for="fullName" class="form-label">Student Name</label>
-                <form:input path="fullName" class="form-control" id="fullName" aria-describedby="fullNameHelp"/>
+                <label for="stuName" class="form-label">Student Name</label>
+                <form:input path="stuName" class="form-control" id="stuName"/>
             </div>
             <div class="form-check form-check-inline">
                 <form:radiobutton class="form-check-input" path="gender" id="male" value="true"/>
