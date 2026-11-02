@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Title</title>
+    <title>Add Student</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +13,24 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">Quản Lý Hệ Thống</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="loadStudents">Quản lý Sinh viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="loadProducts">Quản lý Sản phẩm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mb-5">
         <h1>INSERT STUDENT</h1>
         <h3 class="text-danger">${err}</h3>
         <form:form action="insertStudent" modelAttribute="s" method="post">
@@ -48,6 +65,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Insert</button>
             <button type="reset" class="btn btn-secondary">Clear</button>
+            <a href="loadStudents" class="btn btn-outline-secondary ml-2">Back to List</a>
         </form:form>
     </div>
 <!-- Optional JavaScript -->
